@@ -1,0 +1,31 @@
+{"default_planets":
+    [{"Borealis":[
+        {"envirorment_rng":"Easy"},
+        {"food_rng":"Common"},
+        {"materials_rng":"Common"},
+        {"conection_speed":"Fast"},
+        {"planet_name":"Borealis"}
+    ]},
+    {"Trappis":[
+        {"envirorment_rng":"Hard"},
+        {"food_rng":"Rare"},
+        {"materials_rng":"Rare"},
+        {"conection_speed":"Slow"},
+        {"planet_name":"Trappis"}
+    ]},
+    {"Kamma":[
+        {"envirorment_rng":"Hostile"},
+        {"food_rng":"Scarce"},
+        {"materials_rng":"Scarce"},
+        {"conection_speed":"Very Slow"},
+        {"planet_name":"Kamma"}
+    ]},
+    {"XAEA-12":[
+        {"envirorment_rng":"???"},
+        {"food_rng":"???"},
+        {"materials_rng":"???"},
+        {"conection_speed":"???"},
+        {"planet_name":"XAEA-12"}
+    ]}],
+"custom_planets":[]
+}

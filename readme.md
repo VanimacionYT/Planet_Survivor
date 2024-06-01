@@ -12,7 +12,7 @@ The project uses Python 3.12 (LTS)
 
 # Dependencies
 
-All required dependencies are listed on the "requirements.txt" file and can be easily be downloaded using the pip command *~ pip install -r ./requirements.txt*
+All required dependencies are listed on the "requirements.txt" file and can be easily be downloaded using the pip command *pip install -r ./requirements.txt*
 Below are all the libraries utilized in the project:
 - Termcolor
 - Getpass
@@ -31,7 +31,7 @@ WIP
 # Saving Method
 In this project, and with the objective of practice, I will be using the .json extension file, along with others like .txt to save game info, NPC, game saves and others.
 
-All the information about every file will be explained in [Files](https://github.com/VanimacionYT/Planet-Survivor/blob/main/ReadMe.md#Files)
+All the information about every file will be explained in [Files Section](https://github.com/VanimacionYT/Planet_Survivor?tab=readme-ov-file#files)
 
 # Known Issues
 None (Project in WIP)

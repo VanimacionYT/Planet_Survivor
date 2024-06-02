@@ -1,6 +1,8 @@
+#This file stores all objects in the project
+
 import random
 from SRC.variables import mnames_route,fnames_route,surnames_route
-#File saves all objects
+
 class NPC():
     __genere = ""
     __name = ""
@@ -27,9 +29,9 @@ class NPC():
         self.__genere_ID = random.randint(1, 2)
         if self.__genere_ID == 1:
             self.__genere = "Male"
-            with open(mnames_route, 'r') as mnames:
+            with open(mnames_route, 'r', encoding="utf8") as mnames:
                 mnames.seek(0)
-                name = 1-(random.randint(1,(len(mnames.readlines()))))
+                name = 1-random.randint(1,(len(mnames.readlines())))
                 mnames.seek(0)
                 lines = mnames.read()
                 lines = lines.split("\n")
@@ -38,7 +40,7 @@ class NPC():
             self.__name = name
         else:
             self.__genere = "Female"
-            with open(fnames_route, 'r') as fnames:
+            with open(fnames_route, 'r', encoding="utf8") as fnames:
                 fnames.seek(0)
                 name = 1-random.randint(1,(len(fnames.readlines())))
                 fnames.seek(0)
@@ -49,7 +51,7 @@ class NPC():
             self.__name = name
         
         #asigns surnames
-        with open(surnames_route, 'r') as surnames:
+        with open(surnames_route, 'r', encoding="utf8") as surnames:
             surnames.seek(0)
             surname = 1-random.randint(1,(len(surnames.readlines())))
             surnames.seek(0)
@@ -124,8 +126,6 @@ class NPC():
     def is_alive(self, new):
         self.__is_alive = new
 
-    
-
 class Planet():
     __envirorment_rng = 0
     __food_rng = 0
@@ -141,4 +141,24 @@ class Planet():
         self.__planet_name = planet_name
 
 class Base():
-    pass
+    __base_name = ""
+    __materials_storage = 0
+    __food_storage = 0
+    __antena_status = 0
+    __message_status = 0
+    __crew_members = []
+    __injured_crew_members = []
+    __healthy_crew_members = []
+
+    def __init__(self, base_name, materials_storage, food_storage, crew_members):
+        self.__base_name = base_name
+        self.__materials_storage = materials_storage
+        self.__food_storage = food_storage
+        self.__crew_members = crew_members
+        self.__antena_status = 100
+        self.__message_status = 0
+        self.__healthy_crew_members = self.__crew_members
+
+class Company():
+    def __init__(self, company_name, materials, food, base_strength):
+        pass

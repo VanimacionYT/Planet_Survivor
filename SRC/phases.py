@@ -8,7 +8,6 @@ from SRC.Control.Current import CurrentState
 from SRC.Control.Global import GlobalState
 
 #File that manages the diverse files
-
 def TITLE():
     clear_screen()
     #Short animation for the title
@@ -24,9 +23,8 @@ def TITLE():
     GlobalState.GlobalGame = CurrentState.MENU
 
 def MENU():
-    menu = True
     #While loop to mantain the menu screen
-    while menu == True:
+    while True:
         top_info_line()
         for x in range(len(striped_title)):
             line=tc.colored(striped_title[x], color=title_colors[x])
@@ -55,9 +53,14 @@ def MENU():
             ask_exit()
 
 def CREATE_GAME_MENU():
-    pass
+    #Selection of Planet
+    while True:
+        top_info_line()
+        print_select_planet()
+        selection = gp.getpass("")
 
-###Must add a continue option (last save)
+
+"""Must add a continue option (last save)"""
 def LOAD_GAME_MENU():
     pass
 
